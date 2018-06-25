@@ -15,4 +15,13 @@ devise_for :users, :controllers => {:registrations => "registrations"}
   get 'signup', to: 'devise/registrations#new'
 end
 
+# this is creating paths to categories in seed.rb
+resources :posts do
+  collection do
+    get 'inpiration'
+    get 'recipes'
+    get 'tiugirls'
+  end
+end
+
 end
