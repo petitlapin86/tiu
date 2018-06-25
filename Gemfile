@@ -22,6 +22,8 @@ gem 'bootstrap_form'
 gem 'jquery-rails'
 # devise is a user login/authentication gem
 gem 'devise'
+# faker gem generates dummy text
+gem 'faker'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -48,7 +50,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails'
+  gem 'factory_bot'
   gem 'rails-controller-testing'
   gem 'headless'
   gem 'poltergeist'
