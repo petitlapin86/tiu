@@ -18,7 +18,7 @@ end
 # this is creating paths to categories in seed.rb
 resources :posts do
   collection do
-    get 'inpiration'
+    get 'inspiration'
     get 'recipes'
     get 'tiugirls'
   end
