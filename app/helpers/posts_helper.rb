@@ -20,4 +20,12 @@ def no_posts_partial_path #If posts are not found, the method will display a mes
   @posts.empty? ? 'posts/branch/no_posts' : 'shared/empty_partial'
 end
 
+def post_format_partial_path
+  current_page?(root_path) ? 'posts/post/home_page' : 'posts/post/branch_page'
+end
+
+def post_format_partial_path #to decide which partial file to render 
+  current_page?(root_path) ? 'posts/post/home_page' : 'posts/post/branch_page'
+end
+
 end
