@@ -1,19 +1,19 @@
 <div id="main-content" class="col-sm-9">
-  <h3 class="page-name"><%= link_to 'Inspiration', inspiration_posts_path %></h3>
+  <h3 class="page-name"><%= link_to 'inspiration', inspiration_posts_path %></h3>
   <div class="row">
     <%= render @inspiration_posts %>
     <%= render no_posts_partial_path(@inspiration_posts) %>
   </div><!-- row -->
 
-  <h3 class="page-name"><%= link_to 'Recipes', recipes_posts_path %></h3>
+  <h3 class="page-name"><%= link_to 'recipes', recipes_posts_path %></h3>
   <div class="row">
     <%= render @recipes_posts %>
     <%= render no_posts_partial_path(@recipes_posts) %>
   </div><!-- row -->
 
-  <h3 class="page-name"><%= link_to 'Tone It Up Girls', tiugirls_posts_path %></h3>
+  <h3 class="page-name"><%= link_to 'tiugirls', tiugirls_posts_path %></h3>
   <div class="row">
     <%= render @tiugirls_posts %>
-    <%= render no_posts_partial_path(@team_posts) %>
+    <%= render no_posts_partial_path(@tiugirls_posts) %>
   </div><!-- row -->
 </div><!-- main_content -->
