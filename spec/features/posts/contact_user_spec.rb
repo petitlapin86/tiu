@@ -1,4 +1,4 @@
-equire "rails_helper"
+require "rails_helper"
 
 RSpec.feature "Contact user", :type => :feature do
 	let(:user) { create(:user) }

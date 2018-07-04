@@ -13,4 +13,8 @@ class Private::Conversation < ApplicationRecord
   )
 end
 
+def opposed_user(user)
+  user == recipient ? sender : recipient
+end
+
 end
