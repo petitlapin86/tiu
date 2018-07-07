@@ -8,4 +8,3 @@ module Shared::ConversationsHelper
     not_created_by_user && unseen ? 'unseen-conv' : ''
   end
 end
-view raw
