@@ -37,5 +37,6 @@ class Group::NewConversationService
       added_new_users: arr_of_users_ids ,
       conversation_id: new_group_conversation.id
     )
+    Group::MessageBroadcastJob.perform_later(message, nil, nil)
   end
 end
