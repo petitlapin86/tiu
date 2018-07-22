@@ -44,8 +44,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'gon'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-# paperclip allows image uploads, im using for user profile images 
-gem 'paperclip', '~> 4.1'
+# carrierwave allows image uploads, im using for user profile images 
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

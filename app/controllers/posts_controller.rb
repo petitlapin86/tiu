@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def new
     @branch = params[:branch]
-    @categories = Category.where(branch: @branch)
+    @categories = Category.where(branch: @branch.capitalize)
     @post = Post.new
   end
 
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:content, :title, :category_id)
+    params.require(:post).permit(:content, :title, :category_id, :image)
                          .merge(user_id: current_user.id)
   end
 
