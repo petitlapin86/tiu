@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "50x50>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -36,8 +38,8 @@ class User < ApplicationRecord
               validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
           
   validates :name, presence: true, length: { minimum: 4 }
-  validates :password, presence: true, length: { minimum: 5 }
-  validates :password_confirmation, presence: true, length: { minimum: 5 }
+  # validates :password, presence: true, length: { minimum: 5 }
+  # validates :password_confirmation, presence: true, length: { minimum: 5 }
 
   # gets all your contacts
   def all_active_contacts
