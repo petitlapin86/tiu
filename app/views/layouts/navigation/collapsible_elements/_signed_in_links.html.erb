@@ -2,6 +2,7 @@
   <a id="user-settings" class="dropdown-toggle" data-toggle="dropdown" href="#">
     <span id="user-name"><%= current_user.name %></span>
     <span class="caret"></span>
+    <span><%= image_tag(current_user.avatar(:thumb), :size => "30x30" ) %></span>
   </a>
 
   <ul class="dropdown-menu" role="menu">
