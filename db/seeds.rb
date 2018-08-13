@@ -27,15 +27,15 @@ def seed_categories
   tiugirls = ['Workout Queens', 'Newbie', 'Boss Babes', 'Sunshine Seekers', 'Mamas To Be', 'Mamas']
 
   inspiration.each do |name|
-    Category.create(branch: 'Inspiration', name: name)
+    Category.create(branch: 'inspiration', name: name)
   end
 
   recipes.each do |name|
-    Category.create(branch: 'Recipes', name: name)
+    Category.create(branch: 'recipes', name: name)
   end
 
   tiugirls.each do |name|
-    Category.create(branch: 'TIU Girls', name: name)
+    Category.create(branch: 'tiugirls', name: name)
   end
 end
 
